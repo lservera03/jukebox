@@ -48,7 +48,7 @@ echo -e "		</table>
 		</form>
 
 		<br><br>
-		<a href=menu.sh>Return</a>
+		<a href=menu.sh>RETURN</a>
 		</body>
 	</html>
 "
