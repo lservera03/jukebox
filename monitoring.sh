@@ -34,7 +34,7 @@ echo -e "
 		<p>Memory load: $memory%</p>
 		<p>Disk load: $disk</p>	
 		<p>Server in use since: $uptime</p>
-		<p>Last 10 connections: $last_connections</p>
+		<p>Last 10 connections:  $last_connections</p>
 
 		<br><br>
 		<a href="menu.sh">RETURN</a>
