@@ -17,8 +17,8 @@ read parametersPOST
 username=`echo $parametersPOST | grep -oP 'username=\K.*'`
 
 if [ $(getent passwd $username) ] ; then
-
-        sudo userdel $username
+       	
+	sudo userdel $username
         echo "User has been deleted successfuly"
 
 else
