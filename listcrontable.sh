@@ -12,13 +12,25 @@ echo -e "<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Strict//EN"
                 <body>
                 <h1>List crontab</h1>
 "
-        while IFS=":" read -r usuario _
-        do
-        #       echo "crontab del usuario ${usuario}:"
-                cron=sudo crontab -l -u $usuario
-                echo $cron
+       
+      		user=`whoami`
 
-        done < /etc/passwd
+                echo "crontab del usuario $user:"
+		
+             if text=`sudo crontab -u $user -l | egrep -v '^\s*#'` ; then
+echo -e "
+                <br><br>
+		<p>$text</p>
+"	
+		
+	else
+
+echo -e "
+		<p>There is not crontab </p><br>
+
+"
+		
+	fi 
 
 echo -e "
                 <br><br>

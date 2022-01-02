@@ -13,17 +13,28 @@ echo -e "<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Strict//EN"
                 <h1>Add duties</h1>
                 <form action="createcron.sh" method="get">
                 	Username: <input type="text" name="weekday" required>&nbsp <p></p>
-                	Minute:<input type="number" name="minute" min="0" max="59" required>&nbsp (0-59)<p></p>
-                	Hours: <input type="number" name="hours" min="0" max="23" required>&nbsp (0-23)<p></p>
-                	Day: <input type="number" name="day" min="0" max="31" required>&nbsp (0-31)<p></p>
-                	Month: <input type="number" name="month" min="0" max="12" required>&nbsp 0-12 [12 == December]<p></p>
-                	Weekday: <input type="number" name="weekday" min="0" max="7" required>&nbsp 0-7[7 o 0 == Sunday]<p></p>
-                	Path or command: <input type="text" name="weekday" required>&nbsp / path / to / command - Script or command name to program<p></p>
+                	Minute:<input type="number" name="minute" required>&nbsp (0-59)<p></p>
+                	Hours: <input type="number" name="hours"required>&nbsp (0-23)<p></p>
+                	Day: <input type="number" name="day"required>&nbsp (0-31)<p></p>
+                	Month: <input type="number" name="month" required>&nbsp 0-12 [12 == December]<p></p>
+                	Weekday: <input type="number" name="weekday" required>&nbsp 0-7[7 o 0 == Sunday]<p></p>
+                	Path or command: <input type="text" name="weekday" required>&nbsp / path / to / command - Scr						ipt or command name to program<p></p>
 
 
 				<input type="submit" value="Add">
 					</form>
-					<br>
+
+			<form action="procreatecron.sh" method="get"><br>
+			<p style="color:red">CAUTIONS!!!</p>
+			<p>If you are an expert you can type the command directly !!</p><br>
+
+			Command cron:<input type="text" name="command_cron" required>&nbsp <br>
+
+  			 <input type="submit" value="Add">		
+			</p>
+			</form>
+		
+			<br>
 				<p>Exemple of sintax is:</p>
 				<p>1 2 3 4 5 /path/to/command arg1 arg2</p>
 				<p>OR</p>
