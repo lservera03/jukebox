@@ -23,7 +23,8 @@ if [ $(getent passwd $username) ] ; then
 	echo "User already exists"
        
 else
-        sudo useradd -m -p $password $username
+	sudo adduser --disabled-password --gecos "" $username  > /dev/null 2>&1
+	sudo chpasswd <<<"$username:$password" 
         echo "User has been creted successfuly"
 fi
 
