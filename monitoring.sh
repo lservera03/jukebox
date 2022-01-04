@@ -25,16 +25,17 @@ disk=`df -T / | grep 'root' | awk '{print $6}'`
 
 uptime=`uptime -s`
 
-last_connections=`last | grep 'pts/0' | head -10 | awk '{print $4,$5,$6}'`
+last_connections=`last | grep 'pts/0' | head -10 | awk '{print $4,$5,$6}' | sed -e "s=$=<br>=g"`
 
-
+logger "JUKEBOX: Checked monitoring information"
 
 echo -e "
-		<p>CPU load: $cpu%</p>
-		<p>Memory load: $memory%</p>
-		<p>Disk load: $disk</p>	
-		<p>Server in use since: $uptime</p>
-		<p>Last 10 connections:  $last_connections</p>
+		<p><b>CPU load:</b> $cpu%</p>
+		<p><b>Memory load:</b> $memory%</p>
+		<p><b>Disk load:</b> $disk</p>	
+		<p><b>Server in use since:</b> $uptime</p>
+		<p><b>Last 10 connections:</b>  </p>
+		$last_connections
 
 		<br><br>
 		<a href="menu.sh">RETURN</a>

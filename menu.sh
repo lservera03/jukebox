@@ -20,7 +20,8 @@ echo -e "<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Strict//EN"
 		<a href="gestionusuarios.sh">User management</a><br><br>
 		<a href="filtering.sh">Packet Filtering</a><br><br>
 		<a href="menutaskmanage.sh">Programmed task management</a><br><br>
-		<a href="jukebox.sh">Musical Functionalities</a><br><br>
+		<br><br>
+		<a href="login.sh">EXIT</a>
 		</body>
 	</html>
 "
