@@ -18,11 +18,12 @@ echo -e "<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Strict//EN"
                 echo "crontab del usuario $user:"
 		
              if text=`sudo crontab -u $user -l | egrep -v '^\s*#'` ; then
+            sudo crontab -u $user -l | egrep -v '^\s*#' > mycron.txt
 echo -e "
                 <br><br>
-		<p>$text</p>
+	
 "	
-		
+		cat mycron.txt | sed -e "s=$=<br>=g"
 	else
 
 echo -e "

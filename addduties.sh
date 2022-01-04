@@ -12,13 +12,12 @@ echo -e "<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Strict//EN"
                 <body>
                 <h1>Add duties</h1>
                 <form action="createcron.sh" method="get">
-                	Username: <input type="text" name="weekday" required>&nbsp <p></p>
-                	Minute:<input type="number" name="minute" required>&nbsp (0-59)<p></p>
-                	Hours: <input type="number" name="hours"required>&nbsp (0-23)<p></p>
-                	Day: <input type="number" name="day"required>&nbsp (0-31)<p></p>
-                	Month: <input type="number" name="month" required>&nbsp 0-12 [12 == December]<p></p>
-                	Weekday: <input type="number" name="weekday" required>&nbsp 0-7[7 o 0 == Sunday]<p></p>
-                	Path or command: <input type="text" name="weekday" required>&nbsp / path / to / command - Scr						ipt or command name to program<p></p>
+                	Minute:<input type="text" name="minute" required>&nbsp (0-59-*)<p></p>
+                	Hours: <input type="text" name="hours"required>&nbsp (0-23-*)<p></p>
+                	Day: <input type="text" name="day"required>&nbsp (0-31-*)<p></p>
+                	Month: <input type="text" name="month" required>&nbsp 0-12-* [12 == December]<p></p>
+                	Weekday: <input type="text" name="weekday" required>&nbsp 0-7-*[7 o 0 == Sunday]<p></p>
+                	Path or command: <input type="text" name="path" required>&nbsp / path / to / command - Script or command name to program <p></p>
 
 
 				<input type="submit" value="Add">
