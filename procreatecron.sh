@@ -20,6 +20,8 @@ echo -e "<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Strict//EN"
 			echo $cron >> mycron.txt	
 			sudo crontab -u $user mycron.txt
 
+
+			logger "JUKEBOX: Created cron task"
 echo -e "                
 		<p>$cron</p><br>
 	

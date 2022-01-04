@@ -13,6 +13,7 @@ echo -e "<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Strict//EN"
                 <h1>List crontab</h1>
 "
        
+		logger "JUKEBOX: Crontable information listed"
       		user=`whoami`
 
                 echo "crontab del usuario $user:"
@@ -22,7 +23,7 @@ echo -e "<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Strict//EN"
 echo -e "
                 <br><br>
 	
-"	
+"
 		cat mycron.txt | sed -e "s=$=<br>=g"
 	else
 

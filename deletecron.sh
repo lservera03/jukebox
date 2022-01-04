@@ -28,6 +28,8 @@ echo -e "<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Strict//EN"
 		les=` sed "$opp d" mycron.txt`
 		echo "$les" > mycron.txt
 		sudo crontab -u $user mycron.txt	
+
+		logger "JUKEBOX: Cron task deleted"
 echo -e "	
 		
 		<p>Cron have been deleted successful</p><br>		
