@@ -39,6 +39,8 @@ echo -e "<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Strict//EN"
 				echo "</tr>" 		
 			done		
 
+logger "JUKEBOX: Checked process management information"
+
 echo -e "		</table>
 		<br><br>
 

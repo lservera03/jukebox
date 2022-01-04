@@ -24,7 +24,8 @@ if [ $(getent passwd $username) ] ; then
        
 else
 	sudo adduser --disabled-password --gecos "" $username  > /dev/null 2>&1
-	sudo chpasswd <<<"$username:$password" 
+	sudo chpasswd <<<"$username:$password"
+       	logger "JUKEBOX: New user $username created"	
         echo "User has been creted successfuly"
 fi
 

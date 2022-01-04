@@ -28,6 +28,7 @@ sleep $seconds
 
 sudo kill -SIGCONT $pid
 
+logger "JUKEBOX: Process $pid interrupted for $seconds seconds"
 
 echo -e "	<h2>The process with PID $pid has been interrupted for $seconds seconds.</h2>
 		

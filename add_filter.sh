@@ -55,6 +55,7 @@ echo $iptable
 
 if `$iptable`;
 then
+	logger "JUKEBOX: Added new iptable filter"
 	echo "<h2>Filter added successfully</h2>"
 else
 	echo "<h2>ERROR: There is an error in filter's  parameters</h2>"

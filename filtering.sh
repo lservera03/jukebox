@@ -20,8 +20,9 @@ echo -e "<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Strict//EN"
 		<h3>Current filters: </h3>
 "
 
-current=`sudo iptables -S`
+current=`sudo iptables -S | sed -e "s=$=<br>=g"`
 
+logger "JUKEBOX: Checked packet filtering information"
 
 echo -e "	$current
 

@@ -19,6 +19,7 @@ username=`echo $parametersPOST | grep -oP 'username=\K.*'`
 if [ $(getent passwd $username) ] ; then
        	
 	sudo userdel $username
+	logger "JUKEBOX: User $username deleted"
         echo "User has been deleted successfuly"
 
 else
