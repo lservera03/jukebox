@@ -51,7 +51,6 @@ fi
 
 iptable="$iptable -j $action"
 
-echo $iptable
 
 if `$iptable`;
 then
