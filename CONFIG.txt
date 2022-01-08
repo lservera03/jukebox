@@ -1,4 +1,0 @@
-#ADD THIS LINE AT THE END OF /etc/sudoers file in order to run succesfully our webserver code.
-
-
-www-data ALL=NOPASSWD:/usr/bin/cat,/usr/sbin/chpasswd,/usr/sbin/adduser,/usr/bin/sed,/usr/bin/touch,/usr/bin/crontab,/usr/sbin/iptables,/usr/bin/kill,/usr/sbin/shutdown,/usr/sbin/useradd,/usr/sbin/userdelwww-data ALL=NOPASSWD:/usr/bin/cat,/usr/sbin/chpasswd,/usr/sbin/adduser,/usr/bin/sed,/usr/bin/touch,/usr/bin/crontab,/usr/sbin/iptables,/usr/bin/kill,/usr/sbin/shutdown,/usr/sbin/useradd,/usr/sbin/userdel
